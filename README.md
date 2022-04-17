@@ -1,4 +1,4 @@
-# Gin + Rel Todo Backend Example
+# Gin + Rel Ticket Order Backend
 
 ## Installation
 
