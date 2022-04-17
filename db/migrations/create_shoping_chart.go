@@ -13,8 +13,8 @@ func MigrateCreateShoppingChart(schema *rel.Schema) {
 		t.Int("user_id", rel.Required(true), rel.Unsigned(true))
 		t.Int("event_id", rel.Required(true), rel.Unsigned(true))
 
-		t.ForeignKey("user_id", "user", "id")
-		t.ForeignKey("event_id", "event", "id")
+		t.ForeignKey("user_id", "users", "id")
+		t.ForeignKey("event_id", "events", "id")
 	})
 }
 

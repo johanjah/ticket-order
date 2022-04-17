@@ -53,8 +53,14 @@ DELETE /shoppingCharts/
 ### Contoh body json
 /// create role
 ```
+// role 1
 {
    "role_name" : "Administrator"
+}
+
+// role 2
+{
+	"role_name" : "User"
 }
 ```
 
@@ -105,8 +111,16 @@ DELETE /shoppingCharts/
 }
 ```
 
+/// shopping chart
+```
+{
+   "event_id" : 1,
+   "user_id" : 2,
+   "ticket_count" : 5
+}
+```
+
 ### Credit
 Kredit kode sumber : https://github.com/go-rel/gin-example/
-
 
 Note : fitur payment belum ada 🙏

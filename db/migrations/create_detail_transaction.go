@@ -5,7 +5,7 @@ import (
 )
 
 func MigrateCreateDetailTransaction(schema *rel.Schema) {
-	schema.CreateTable("detail_transaction", func(t *rel.Table) {
+	schema.CreateTable("detail_transactions", func(t *rel.Table) {
 		t.ID("id", rel.Primary(true), rel.Unique(true))
 		t.DateTime("created_at")
 		t.DateTime("updated_at")
@@ -14,7 +14,7 @@ func MigrateCreateDetailTransaction(schema *rel.Schema) {
 		t.Int("ticket_count", rel.Required(true))
 		t.Int("payment_transaction_id", rel.Required(true), rel.Unsigned(true))
 
-		t.ForeignKey("payment_transaction_id", "payment_transaction", "id")
+		t.ForeignKey("payment_transaction_id", "payment_transactions", "id")
 	})
 }
 
